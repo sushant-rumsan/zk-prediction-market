@@ -41,6 +41,11 @@ export default function CreateEventPage() {
       return;
     }
 
+    if (process.env.NEXT_PUBLIC_APP_ADMIN != publicKey) {
+      setError("Only Admin can create event");
+      return;
+    }
+
     if (!eventName || !eventDetail) {
       setError("Please enter an Event Name and Detail");
       return;
@@ -52,7 +57,7 @@ export default function CreateEventPage() {
     setSuccess(false);
 
     try {
-      const dbRes = mutateCreate({ eventName, eventDetail })
+      mutateCreate({ eventName, eventDetail })
         .then(async (res: any) => {
           const eventId = res.res.id;
           const aleoTransaction = Transaction.createTransaction(
