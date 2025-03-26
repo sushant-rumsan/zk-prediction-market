@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Event {
+  id            Int       @id @default(autoincrement())
+  eventId       Int       @unique
+  eventName     String
+  eventDetail   String
+  isChainSuccess Boolean  @default(false)
+  isResolved     Boolean @default(false)
+  totalYesVote   Int      @default(0)
+  totalNoVote    Int      @default(0)
+  isActive      Boolean   @default(true)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  participations UserParticipation[]
+}
+
+model UserParticipation {
+  id            Int       @id @default(autoincrement())
+  publicKey     String    
+  eventId       Int       
+  stakeKey      String    @unique
+  stakeAmountYes  BigInt    
+  stakeAmountNo   BigInt  
+  isChainSuccess  Boolean @default(false)  
+  createdAt     DateTime  @default(now()) 
+  updatedAt     DateTime  @updatedAt 
+  event         Event     @relation(fields: [eventId], references: [id], onDelete: Cascade) 
+
+  @@unique([publicKey, eventId])
+}

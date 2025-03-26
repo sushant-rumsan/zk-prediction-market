@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Event" ADD COLUMN     "totalNoVote" INTEGER NOT NULL DEFAULT 0,
+ADD COLUMN     "totalYesVote" INTEGER NOT NULL DEFAULT 0;
