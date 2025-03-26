@@ -164,13 +164,13 @@ export function Navbar() {
                   >
                     <div className="py-1">
                       <DropdownLink
-                        href="/docs"
+                        href="#"
                         icon={<BookOpen className="h-4 w-4" />}
                       >
                         Documentation
                       </DropdownLink>
                       <DropdownLink
-                        href="/tutorials"
+                        href="#"
                         icon={<HelpCircle className="h-4 w-4" />}
                       >
                         Tutorials
@@ -216,19 +216,19 @@ export function Navbar() {
                   >
                     <div className="py-1">
                       <DropdownLink
-                        href="/about"
+                        href="#"
                         icon={<Shield className="h-4 w-4" />}
                       >
                         Our Mission
                       </DropdownLink>
                       <DropdownLink
-                        href="/team"
+                        href="#"
                         icon={<Award className="h-4 w-4" />}
                       >
                         Team
                       </DropdownLink>
                       <DropdownLink
-                        href="/stats"
+                        href="#"
                         icon={<BarChart2 className="h-4 w-4" />}
                       >
                         Platform Statistics
@@ -330,11 +330,11 @@ export function Navbar() {
             <p className="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
               Resources
             </p>
-            <MobileNavLink href="/docs">
+            <MobileNavLink href="#">
               <BookOpen className="h-4 w-4 mr-2" />
               Documentation
             </MobileNavLink>
-            <MobileNavLink href="/tutorials">
+            <MobileNavLink href="#">
               <HelpCircle className="h-4 w-4 mr-2" />
               Tutorials
             </MobileNavLink>
@@ -349,15 +349,15 @@ export function Navbar() {
             <p className="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
               About
             </p>
-            <MobileNavLink href="/about">
+            <MobileNavLink href="#">
               <Shield className="h-4 w-4 mr-2" />
               Our Mission
             </MobileNavLink>
-            <MobileNavLink href="/team">
+            <MobileNavLink href="#">
               <Award className="h-4 w-4 mr-2" />
               Team
             </MobileNavLink>
-            <MobileNavLink href="/stats">
+            <MobileNavLink href="#">
               <BarChart2 className="h-4 w-4 mr-2" />
               Platform Statistics
             </MobileNavLink>

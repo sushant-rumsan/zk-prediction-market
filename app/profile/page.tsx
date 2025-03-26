@@ -64,9 +64,9 @@ export default function ProfilePage() {
                 Wallet Details
               </h2>
               <p className="text-gray-600 text-sm">
-                <span className="font-medium">Public Key:</span>{" "}
+                <span className="font-medium">Connection Status:</span>{" "}
                 {publicKey ? (
-                  <span className="font-mono">{publicKey}</span>
+                  <span className="font-mono">Connected</span>
                 ) : (
                   "Not connected"
                 )}
