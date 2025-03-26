@@ -17,9 +17,6 @@ export default function DemoxProvider({
 }>) {
   const wallets = useMemo(
     () => [
-      new LeoWalletAdapter({
-        appName: "Leo Demo App",
-      }),
       new PuzzleWalletAdapter({
         programIdPermissions: {
           [WalletAdapterNetwork.TestnetBeta]: [BLOCKCHAIN.PROGRAM_ID],

@@ -181,7 +181,9 @@ export default function StakeEventPage() {
       }
     } catch (err) {
       console.error("Failed to fetch event details:", err);
-      setError("Failed to load event details");
+      setError(
+        "This event is either pending blockchain transaction or is not valid!"
+      );
     } finally {
       setEventLoading(false);
     }

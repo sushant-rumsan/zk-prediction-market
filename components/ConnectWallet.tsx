@@ -11,10 +11,7 @@ const ConnectWalletButton = () => {
 
   const handleWalletSelect = (walletId: any) => {
     const walletAdapterMap = {
-      "leo-wallet": "Leo Wallet",
       "puzzle-wallet": "Puzzle Wallet",
-      "fox-wallet": "Fox Wallet",
-      "soter-wallet": "Soter Wallet",
     };
 
     //@ts-ignore
