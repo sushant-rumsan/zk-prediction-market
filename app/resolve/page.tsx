@@ -49,6 +49,11 @@ export default function ResolveEventPage() {
       return;
     }
 
+    if (process.env.NEXT_PUBLIC_APP_ADMIN != publicKey) {
+      setError("Only Admin can Resolve event");
+      return;
+    }
+
     if (!validateInputs()) {
       return;
     }
@@ -87,36 +92,6 @@ export default function ResolveEventPage() {
     } finally {
       setLoading(false);
     }
-  };
-
-  // Particle animation variants
-  const particleVariants = {
-    animate: {
-      x: ["-100%", "100%"],
-      transition: {
-        x: {
-          repeat: Number.POSITIVE_INFINITY,
-          repeatType: "loop",
-          duration: 25,
-          ease: "linear",
-        },
-      },
-    },
-  };
-
-  // Individual particle animation for slight vertical drift
-  const particleDrift = {
-    animate: {
-      y: [0, -10, 0],
-      transition: {
-        y: {
-          repeat: Number.POSITIVE_INFINITY,
-          repeatType: "reverse",
-          duration: 5,
-          ease: "easeInOut",
-        },
-      },
-    },
   };
 
   return (

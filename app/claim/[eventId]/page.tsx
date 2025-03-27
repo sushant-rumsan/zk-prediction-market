@@ -12,7 +12,7 @@ import {
   Transaction,
   WalletAdapterNetwork,
 } from "@demox-labs/aleo-wallet-adapter-base";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import { useEffect, useState, useRef } from "react";
 import { BLOCKCHAIN } from "@/constants/blockchain";
 import Link from "next/link";
